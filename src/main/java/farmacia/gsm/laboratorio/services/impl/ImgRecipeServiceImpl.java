@@ -3,7 +3,6 @@ package farmacia.gsm.laboratorio.services.impl;
 import farmacia.gsm.laboratorio.entities.ImgRecipe;
 import farmacia.gsm.laboratorio.repositories.ImgRecipeRepository;
 import farmacia.gsm.laboratorio.services.ImgRecipeService;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

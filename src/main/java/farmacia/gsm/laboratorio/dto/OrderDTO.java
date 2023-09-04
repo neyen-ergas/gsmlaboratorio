@@ -3,9 +3,6 @@ package farmacia.gsm.laboratorio.dto;
 import farmacia.gsm.laboratorio.enums.State;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-import lombok.Getter;
-
-import java.util.List;
 
 @Data
 public class OrderDTO {
