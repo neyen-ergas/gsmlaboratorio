@@ -6,6 +6,8 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -26,6 +28,10 @@ public class Order {
     @CreationTimestamp
     private LocalDateTime creationDate;
 
+    @JsonIgnore
+    @UpdateTimestamp
+    private LocalDateTime updateDate;
+
     @NotNull
     private String firstName;
 
@@ -45,7 +51,8 @@ public class Order {
     @NotNull
     private String price;
 
-    @OneToMany
+
+    @OneToMany(fetch = FetchType.EAGER)
     private List<ImgRecipe> imgRecipe;
 
     @NotNull
@@ -54,7 +61,6 @@ public class Order {
     @NotNull
     private State state;
 
-    @NotNull
     private String comment;
 
 
