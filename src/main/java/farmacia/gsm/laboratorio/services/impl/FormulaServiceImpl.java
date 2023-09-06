@@ -14,4 +14,6 @@ public class FormulaServiceImpl implements  FormulaService{
     public Formula save(Formula formula ){
         return formulaRepository.save(formula);
     }
+
+
 }
