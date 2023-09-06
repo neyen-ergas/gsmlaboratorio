@@ -1,7 +1,6 @@
 package farmacia.gsm.laboratorio.dto;
 
 import farmacia.gsm.laboratorio.enums.State;
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data

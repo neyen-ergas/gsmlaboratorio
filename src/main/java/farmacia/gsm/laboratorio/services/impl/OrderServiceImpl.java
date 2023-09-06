@@ -3,7 +3,6 @@ package farmacia.gsm.laboratorio.services.impl;
 import farmacia.gsm.laboratorio.entities.Order;
 import farmacia.gsm.laboratorio.repositories.OrderRepository;
 import farmacia.gsm.laboratorio.services.OrderService;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
