@@ -4,8 +4,6 @@ public enum State {
     ESPERA,
     PREPARACION,
 
-    PASADO,
-
     LISTO,
     INCONVENIENTE
 
