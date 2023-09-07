@@ -123,4 +123,20 @@ public class OrderController {
         orderService.save(order);
         return ResponseEntity.ok(order);
     }
+
+    @SneakyThrows
+    @GetMapping("/{id}")
+    public ResponseEntity<Order> orderDetails(@PathVariable("id") Long id) {
+        Order order = orderService.findById(id).orElseThrow();
+        return ResponseEntity.ok(order);
+    }
+
+    @GetMapping("/todas")
+    public ResponseEntity<List<Order>> getAllOrders() {
+        List<Order> orders = orderService.getAllOrders();
+        return ResponseEntity.ok(orders);
+    }
+
+
+
 }
