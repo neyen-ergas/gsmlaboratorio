@@ -1,4 +1,5 @@
 package farmacia.gsm.laboratorio.entities;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import farmacia.gsm.laboratorio.enums.Role;
 import jakarta.persistence.*;
@@ -42,6 +43,7 @@ public class User implements Serializable, UserDetails {
     @NotNull
     private boolean softDelete;
 
+    @JsonIgnore
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.name()));
@@ -51,20 +53,24 @@ public class User implements Serializable, UserDetails {
     @Override
     public @NotNull String getPassword() { return password; }
 
-    @JsonIgnore
     @Override
     public String getUsername() { return username; }
 
+    @JsonIgnore
     @Override
-    public boolean isAccountNonExpired() { return false; }
+    public boolean isAccountNonExpired() {
+        return true;
+    }
 
+    @JsonIgnore
     @Override
-    public boolean isAccountNonLocked() { return false; }
+    public boolean isAccountNonLocked() { return true; }
 
+    @JsonIgnore
     @Override
-    public boolean isCredentialsNonExpired() { return false; }
+    public boolean isCredentialsNonExpired() { return true; }
 
+    @JsonIgnore
     @Override
-    public boolean isEnabled() { return false; }
-
+    public boolean isEnabled() { return true; }
 }
