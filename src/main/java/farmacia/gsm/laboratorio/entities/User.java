@@ -4,6 +4,14 @@ import farmacia.gsm.laboratorio.enums.Role;
 import jakarta.persistence.*;
 import lombok.*;
 import jakarta.validation.constraints.NotNull;
+import org.hibernate.annotations.Where;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.io.Serializable;
+import java.util.Collection;
+import java.util.List;
 
 
 @Getter
@@ -13,7 +21,8 @@ import jakarta.validation.constraints.NotNull;
 @Builder
 @Entity
 @Table(name = "users")
-public class User {
+@Where(clause = "soft_delete = false")
+public class User implements Serializable, UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -28,4 +37,34 @@ public class User {
     @JsonIgnore
     @NotNull
     private Role role;
+
+    @JsonIgnore
+    @NotNull
+    private boolean softDelete;
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of(new SimpleGrantedAuthority(role.name()));
+    }
+
+    @JsonIgnore
+    @Override
+    public @NotNull String getPassword() { return password; }
+
+    @JsonIgnore
+    @Override
+    public String getUsername() { return username; }
+
+    @Override
+    public boolean isAccountNonExpired() { return false; }
+
+    @Override
+    public boolean isAccountNonLocked() { return false; }
+
+    @Override
+    public boolean isCredentialsNonExpired() { return false; }
+
+    @Override
+    public boolean isEnabled() { return false; }
+
 }
