@@ -1,6 +1,6 @@
 package farmacia.gsm.laboratorio.config;
 
-import farmacia.gsm.laboratorio.services.AuthorizationService;
+import farmacia.gsm.laboratorio.services.auth.AuthorizationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

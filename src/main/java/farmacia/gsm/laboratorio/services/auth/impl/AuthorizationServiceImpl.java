@@ -1,7 +1,7 @@
-package farmacia.gsm.laboratorio.services.impl;
+package farmacia.gsm.laboratorio.services.auth.impl;
 
 import farmacia.gsm.laboratorio.repositories.UserRepository;
-import farmacia.gsm.laboratorio.services.AuthorizationService;
+import farmacia.gsm.laboratorio.services.auth.AuthorizationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

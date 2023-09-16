@@ -1,7 +1,8 @@
 package farmacia.gsm.laboratorio.controllers;
 
+import farmacia.gsm.laboratorio.dto.JwtAuthResponse;
 import farmacia.gsm.laboratorio.dto.UserLogInDTO;
-import farmacia.gsm.laboratorio.services.AuthenticationService;
+import farmacia.gsm.laboratorio.services.auth.AuthenticationService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;

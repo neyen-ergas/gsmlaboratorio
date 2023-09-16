@@ -1,10 +1,12 @@
-package farmacia.gsm.laboratorio.services.impl;
+package farmacia.gsm.laboratorio.services.auth.impl;
 
+import farmacia.gsm.laboratorio.dto.JwtAuthResponse;
 import farmacia.gsm.laboratorio.dto.UserLogInDTO;
 import farmacia.gsm.laboratorio.exceptions.ErrorCode;
 import farmacia.gsm.laboratorio.exceptions.UserException;
 import farmacia.gsm.laboratorio.repositories.UserRepository;
-import farmacia.gsm.laboratorio.services.AuthenticationService;
+import farmacia.gsm.laboratorio.services.auth.AuthenticationService;
+import farmacia.gsm.laboratorio.services.auth.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;

@@ -1,4 +1,4 @@
-package farmacia.gsm.laboratorio.services;
+package farmacia.gsm.laboratorio.services.auth;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 
