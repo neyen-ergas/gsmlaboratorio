@@ -5,7 +5,7 @@ import lombok.*;
 
 @Data
 @Builder
-public class UserLoginDTO {
+public class UserLogInDTO {
 
     @NotNull
     private String username;
