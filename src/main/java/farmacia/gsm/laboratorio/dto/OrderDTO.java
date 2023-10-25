@@ -13,7 +13,6 @@ public class OrderDTO {
     @NotNull
     private String lastName;
 
-
     @NotNull
     private String formula;
 
@@ -33,7 +32,6 @@ public class OrderDTO {
 
     @NotNull
     private State state;
-
 
     private String comment;
 }
