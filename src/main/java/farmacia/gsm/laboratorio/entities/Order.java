@@ -24,7 +24,6 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonIgnore
     @CreationTimestamp
     private LocalDateTime creationDate;
 
@@ -62,7 +61,5 @@ public class Order {
     private State state;
 
     private String comment;
-
-
 
 }
